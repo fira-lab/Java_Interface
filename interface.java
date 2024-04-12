@@ -1,22 +1,26 @@
+import javax.swing.*;
 import java.awt.*;
 
 class TestFrame1 {
     public static void main(String[] args){
-        Frame f1 = new Frame();
+        JFrame f1 = new JFrame();
         f1.setVisible(true);
         f1.setSize(500,500);
         f1.setTitle("Login");
 
+        JLabel l1 = new JLabel("User name");
+        JLabel l2 = new JLabel("Password");
+
+        JTextField t1 = new JTextField(20);
+        JPasswordField t2 = new JPasswordField(20);
+
+        JButton b1 = new JButton("Submit");
+        JButton b2 = new JButton("Reset");
+
+        JCheckBox o = new JCheckBox("tick");
+
         
 
-        Label l1 = new Label("User name");
-        Label l2 = new Label ("password");
-
-        TextField t1 = new TextField(20);
-        TextField t2 = new TextField(20);
-
-        Button b1 = new Button("submit");
-        Button b2 = new Button("Reset");
 
         f1.setLayout(new FlowLayout());
 
@@ -26,5 +30,8 @@ class TestFrame1 {
         f1.add(t2);
         f1.add(b1);
         f1.add(b2);
+        f1.add(o);
+
+        f1.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     }
 }
